@@ -14,7 +14,6 @@
   * [Video](knowledge/linux/video.md)
   * [Screenshot](knowledge/linux/screenshot.md)
   * [trans](knowledge/linux/trans.md)
-  * [ssh](knowledge/linux/ssh.md)
   * [ftp](knowledge/linux/ftp.md)
   * [Torrent](knowledge/linux/torrent.md)
 * **DevOps**
