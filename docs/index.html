@@ -9,14 +9,22 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 </head>
 <body>
-  <div id="app"></div>
+  <div data-app id="app"></div>
+
+  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
   <script>
     window.$docsify = {
-      // el: '#main',
       name: 'pepsik',
       repo: 'https://github.com/pepsi1k/pepsi1k.github.io',
       loadSidebar: true,
-      loadNavbar: true
+      subMaxLevel: 2,
+      loadNavbar: true,
+      plugins: [
+        EditOnGithubPlugin.create(
+          "https://github.com/pepsi1k/pepsi1k.github.io/tree/master/docs", 
+          null, 
+          "Edit on github")
+      ]
     }
   </script>
   <!-- Docsify v4 -->

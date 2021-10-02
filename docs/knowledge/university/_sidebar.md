@@ -1,2 +1,2 @@
-* **University**
-  * [mongodb](knowledge/university/mongodb.md)
+- **University**
+  - [mongodb](knowledge/university/mongodb.md)
