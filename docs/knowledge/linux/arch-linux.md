@@ -132,7 +132,7 @@ sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist.backup
 rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist
 ```
 
-> ERROR: *rankmirrirs command not found*. Значит нужно установить паке **pacman-contrib**:
+!> **ERROR:** rankmirrirs command not found. Значит нужно установить паке **pacman-contrib**:
 ```console
 pacman -Sy pacman-contrib
 ```
