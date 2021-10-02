@@ -1,4 +1,4 @@
-* General
+* **General**
   * [Knowledge base](knowledge/general/knowledge-base.md)
   * [Git](knowledge/general/git.md)
   * [Questions](knowledge/general/questions.md)
