@@ -1,5 +1,4 @@
-#Docker 
-
+## Docker 
 
 [Beginer guid](https://docker-curriculum.com/)
 
@@ -24,14 +23,15 @@ docker rm $(docker ps -a -q)
 docker build -t IMAGE_NAME PATH_TO_DOCKERFILE 	# build image
 ```
 
-## Docker-compose
 
+## Run interactive mod on stoped container
 ```bash
-docker-compose build
-docker-compose up
+docker commit $cointainer_id debug/some
+docker run -it degub/some /bin/bash
 ```
 
-## cloudWatch logging driver
+
+## CloudWatch logging driver
 https://docs.docker.com/config/containers/logging/awslogs/
 
 https://wdullaer.com/blog/2016/02/28/pass-credentials-to-the-awslogs-docker-logging-driver-on-ubuntu/

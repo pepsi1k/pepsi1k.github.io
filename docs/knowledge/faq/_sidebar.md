@@ -1,3 +1,3 @@
 * **FAQ**
-  * [Wi-Fi Linux](knowledge/faq/wi-fi_linux.md)
+  * [Linux](knowledge/faq/linux.md)
   * [React Native](knowledge/faq/react-native.md)

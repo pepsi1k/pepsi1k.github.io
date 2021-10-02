@@ -19,14 +19,18 @@
   * [Torrent](knowledge/linux/torrent.md)
 * **DevOps**
   * [AWS](knowledge/devops/aws.md)
-  * [Kubernetes](knowledge/devops/kubernetes.md)
   * [Docker](knowledge/devops/docker.md)
+  * [Kubernetes](knowledge/devops/kubernetes.md)
+  * [ETH prune](knowledge/devops/eth-prune.md)
   * [nginx](knowledge/devops/nginx.md)
+* **Security** 
+  * [General](knowledge/security/general.md)
+  * [SSH](knowledge/security/ssh.md)
+  * [Change MAC](knowledge/security/macchanger.md)
 * **Languages**
   * [bash](knowledge/languages/bash.md)
-* **FAQ**
-  * [Wi-Fi Linux](knowledge/faq/wi-fi_linux.md)
-  * [React Native](knowledge/faq/react-native.md)
 * **University**
   * [mongodb](knowledge/university/mongodb.md)
- 
+* **FAQ**
+  * [Linux](knowledge/faq/linux.md)
+  * [React Native](knowledge/faq/react-native.md)

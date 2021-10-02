@@ -91,29 +91,16 @@ done
 !> **WARNING!** Следуйщие команды предназначенны для старых версий bash. 
 Для версий (bash v3.x+) лучше использывать варианты выше.
 
-Цикл с шагом {start..end..increment}:
 ```bash
-for i in {0..10..2}; do
-	#commands
-done
-```
+# Цикл с шагом {start..end..increment}:
+for i in {0..10..2}; do echo $i; done
 
-Цикл с шагом `seq 1 2 5` -> **1 2 3**:
-```bash
-for i in $(seq 1 2 10); do
-	#commands
-done
-```
+# Цикл с шагом seq 1 2 5 -> 1 3 5:
+for i in $(seq 1 2 10); do echo $i; done
 
-```bash
-for (( i=0; i<=5; i++ )); do
-	#commands
-done
-```
+for (( i=0; i<=5; i++ )); do echo $i; done
 
-```bash
-while [[ expretion ]]; do
-	#commands
+while [[ expretion ]]; do 
 done
 ```
 

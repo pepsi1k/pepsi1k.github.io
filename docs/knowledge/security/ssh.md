@@ -42,7 +42,7 @@ scp user@server:file.txt /home/user
 scp -r user@server:/path/to/folder /home/user # Копирование директорий
 ```
 
-> Если не указывать полный путь, файл будет копироваться с или в домашнюю директорию
+> Если не указывать полный путь, файл будет копироваться из/в домашнюю директорию
 
 ### Генерация ключей
 
@@ -58,4 +58,13 @@ ssh-keygen -t rsa -b 4096 -C "bogdan@home"
 Передача публичного ключа на сервер
 ```bash
 cat ~/.ssh/id_rsa.pub | ssh user@hostname 'cat >> .ssh/authorized_keys'
+```
+
+Чтобы постоянно не прописывать путь к ключу для специфического хоста, можно настроить `~/.ssh/config`:
+```
+host github.com
+	HostName github.com
+	IdentityFile ~/.ssh/id_rsa_github
+	User git
+	PreferredAuthentications publickey
 ```

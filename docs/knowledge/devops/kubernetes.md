@@ -24,3 +24,103 @@ kubectl proxy --port=8080
 kubectl cluster-info 	# view the claster details
 kubectl get nodes 		# view the nodes in the claster
 ```
+
+## Copy file from pod to local host
+```bash
+kubectl cp <some-namespace>/<some-pod>:/tmp/foo /tmp/bar -c <container-name>
+```
+
+## Get all pod logs in current namespace
+
+```bash
+for i in $(kubectl get pods -o json | jq -r '.items[].metadata.name'); do kubectl logs $i > $i; done
+```
+
+## Get all pods by specific node
+```bash
+kubectl get pod -A --field-selector spec.nodeName=$node
+```
+
+
+## Mount empty directory to two containers
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: busybox-modsec
+  namespace: ingress
+  labels:
+    app: busybox-modsec
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: busybox-modsec
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: busybox-modsec
+      annotations:
+        linkerd.io/inject: disabled
+    spec:
+      initContainers:
+        - name: touch-log-files
+          image: busybox:stable
+          command:
+            - '/bin/sh'
+            - '-c'
+            - |
+              touch /var/log/modsec/audig.log;
+              touch /var/log/modsec/debug.log
+          volumeMounts:
+            - mountPath: /var/log/modsec
+              name: modsec
+      containers:
+        - name: busybox-write
+          image: busybox:stable
+          command:
+            - '/bin/sh'
+            - '-c'
+            - |
+              while true; do 
+                echo "write: warn";
+                echo "warn" >> /var/log/modsec/audig.log;
+                sleep 4s
+              done
+          volumeMounts:
+            - mountPath: /var/log/modsec
+              name: modsec
+          resources:
+            requests:
+              cpu: 20m
+              memory: 30Mi
+            limits:
+              cpu: 30m
+              memory: 40Mi
+        - name: busybox-read
+          image: busybox:stable
+          command:
+            - '/bin/sh'
+            - '-c'
+            - |
+              tail -f /var/log/modsec/audig.log;
+          volumeMounts:
+            - mountPath: /var/log/modsec
+              name: modsec
+              readOnly: true
+          resources:
+            requests:
+              cpu: 20m
+              memory: 30Mi
+            limits:
+              cpu: 30m
+              memory: 40Mi
+      volumes:
+        - name: modsec
+          emptyDir: {}
+```
