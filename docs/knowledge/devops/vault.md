@@ -7,7 +7,6 @@ unseal keys stored at `<namespace>/vault-unseal-keys`
 
 ```bash
 # 1. consistently copy unseal keys
-
 unsealKeys=$(kubectl get secret -o json -n vault vault-unseal-keys); for i in {0..3}; do
   read -p "Press enter to continue copy unseal-keys-$i"
   echo $unsealKeys | jq -r ".data[\"vault-unseal-$i\"]" | tr -d "\n" | base64 -d | xclip -selection clipboard
