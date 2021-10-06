@@ -16,4 +16,5 @@ done
 vault operator unseal
 ```
 
->| if you coudn't connect to https://localhost:8200, you must configure cacert, env `VAULT_CACERT`
+>**Error unsealing x509: certificate signed by unknown authority**, 
+  you must configure cacert, env `VAULT_CACERT`
