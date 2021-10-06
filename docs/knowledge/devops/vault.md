@@ -18,3 +18,11 @@ vault operator unseal
 
 >**Error unsealing x509: certificate signed by unknown authority**, 
   you must configure cacert, env `VAULT_CACERT=/vault/tls/ca.crt`
+
+## Vault-configurer error
+
+```log
+{"level":"info","msg":"Failed applying configuration file: /config/vault-configurer/vault-config.yml , sleeping for 1m0s before trying again","time":"2021-10-06T12:38:47Z"}
+```
+
+If you see this error, probably you have an old secret `vault-unseal-keys`. You must delete old one and recreate CR Vault
