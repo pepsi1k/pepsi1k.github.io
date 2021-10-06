@@ -17,4 +17,4 @@ vault operator unseal
 ```
 
 >**Error unsealing x509: certificate signed by unknown authority**, 
-  you must configure cacert, env `VAULT_CACERT`
+  you must configure cacert, env `VAULT_CACERT=/vault/tls/ca.crt`
