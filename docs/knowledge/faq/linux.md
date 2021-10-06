@@ -1,4 +1,9 @@
 
+## Curl with cacert
+```bash
+curl --cacert ca.crt https://example.com
+```
+
 ## Find large files/directories
 ```bash
 Find bit size file
