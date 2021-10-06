@@ -4,3 +4,4 @@
   * [Kubernetes](knowledge/devops/kubernetes.md)
   * [ETH prune](knowledge/devops/eth-prune.md)
   * [nginx](knowledge/devops/nginx.md)
+  * [vault](knwoledge/devops/vault.md)
