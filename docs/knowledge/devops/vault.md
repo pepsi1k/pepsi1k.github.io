@@ -1,7 +1,12 @@
 # Vault
 
+## Vault command
 
-## Init Vault
+```bash
+vault kv get secret/account/aws
+```
+
+## Init Banzai vault
 After deploy banzai vault-operator and create Vault from CRD, you must unseal vault, 
 unseal keys stored at `<namespace>/vault-unseal-keys`
 
@@ -19,7 +24,7 @@ vault operator unseal
 >**Error unsealing x509: certificate signed by unknown authority**, 
   you must configure cacert, env `VAULT_CACERT=/vault/tls/ca.crt`
 
-## Vault-configurer error
+## Banzai vault-configurer error
 
 ```log
 {"level":"info","msg":"Failed applying configuration file: /config/vault-configurer/vault-config.yml , sleeping for 1m0s before trying again","time":"2021-10-06T12:38:47Z"}
