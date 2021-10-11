@@ -31,6 +31,36 @@ docker run -it degub/some /bin/bash
 ```
 
 
+## journald logging driver
+
+```yaml
+# docker-compose.yml
+version: '3'
+
+services:
+  hello-log:
+    container_name: hello-log
+    image: ubuntu
+    command: |
+      /bin/bash -c '
+      while true; do
+        echo "16:37 hello"
+        sleep 3s
+      done
+      '
+    logging:
+        driver: journald
+        options:
+            tag: hello-log
+
+```
+
+Then access logs using journalctl command + filter rules: 
+
+```bash
+journalctl -u docker CONTAINER_TAG=hello-log
+```
+
 ## CloudWatch logging driver
 https://docs.docker.com/config/containers/logging/awslogs/
 
