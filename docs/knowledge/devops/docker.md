@@ -35,19 +35,10 @@ docker run -it degub/some /bin/bash
 
 ```yaml
 # docker-compose.yml
-version: '3'
-
 services:
   hello-log:
     container_name: hello-log
     image: ubuntu
-    command: |
-      /bin/bash -c '
-      while true; do
-        echo "16:37 hello"
-        sleep 3s
-      done
-      '
     logging:
         driver: journald
         options:
