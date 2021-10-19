@@ -41,6 +41,19 @@ for i in $(kubectl get pods -o json | jq -r '.items[].metadata.name'); do kubect
 kubectl get pod -A --field-selector spec.nodeName=$node
 ```
 
+## While true
+```yaml
+# Pod
+spec:
+  containers:
+    - command: ['/bin/bash', '-c', '--']
+      args:
+        - |
+          while true; do
+            echo sleep;
+            sleep 3s;
+          done;
+```
 
 ## Mount empty directory to two containers
 ```yaml
