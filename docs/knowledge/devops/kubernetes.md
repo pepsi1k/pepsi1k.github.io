@@ -1,13 +1,13 @@
 # Kubernetes
 
-## Connect to claster
+## Connect to cluster
 Для работы с k8s понадобиться `kuberctl`
 
 Создаем наш кластер на нашем облаке и скачиваем **kubeconfig**, он понадобиться нам для подключения к нашему кластеру.
 
 Теперь можем проверить наши ноды:
 ```bash
-kubectl --kubeconfig=claster-kubeconfig.yaml get nodes
+kubectl --kubeconfig=cluster-kubeconfig.yaml get nodes
 ```
 
 Для того, чтобы постоянно не писать `--kubeconfig`, создадим enironment veriable **KUBECONFIG**:
@@ -21,8 +21,8 @@ kubectl proxy --port=8080
 
 Теперь мы можем взаимодействовать с нашим кластером:
 ```bash
-kubectl cluster-info 	# view the claster details
-kubectl get nodes 		# view the nodes in the claster
+kubectl cluster-info 	# view the cluster details
+kubectl get nodes 		# view the nodes in the cluster
 ```
 
 ## Copy file from pod to local host
