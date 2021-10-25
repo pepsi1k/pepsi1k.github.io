@@ -24,6 +24,7 @@
   * [ETH prune](knowledge/devops/eth-prune.md)
   * [nginx](knowledge/devops/nginx.md)
   * [Vault](knowledge/devops/vault.md)
+  * [ArgoCD](knowledge/devops/argocd.md)
 * **Security** 
   * [General](knowledge/security/general.md)
   * [SSH](knowledge/security/ssh.md)
