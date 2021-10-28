@@ -30,6 +30,11 @@ docker commit $cointainer_id debug/some
 docker run -it degub/some /bin/bash
 ```
 
+## Get container ip
+```bash
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container-id>
+```
+
 
 ## journald logging driver
 
