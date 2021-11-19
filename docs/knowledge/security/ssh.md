@@ -49,7 +49,13 @@ scp -r user@server:/path/to/folder /home/user # Копирование дире�
 Генераци ключей происходит в директории `~/.ssh` командой `ssh-keygen`.
 ```bash
 ssh-keygen -t rsa -b 4096 -C "bogdan@home"
+ssh-keygen -t ecdsa -b 384 -C "bogdan@home" -f bogdan
 ```
+
+RSA: Equal or greater-than to 1024 bit.
+ECDSA: 256, 384, or 521 bit.
+ED25519: 256 bit.
+DSS: 1024 bit.
 
 * `id_rsa` - приватный ключ
 * `id_rsa` - публичный ключ
