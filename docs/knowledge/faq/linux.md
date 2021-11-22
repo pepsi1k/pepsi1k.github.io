@@ -13,6 +13,10 @@ Show directory size
 du -sh */
 ```
 
+## List available packages
+```bash
+apt-cache madison gitlab-ce
+```
 
 ## WI-FI cli
 
