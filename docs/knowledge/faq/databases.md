@@ -8,3 +8,10 @@ connect to $database_name and create extension "uuid-ossp", if you are using uui
 ```bash
 create extension if not exists "uuid-ossp";
 ```
+
+general commands
+```bash
+drop database <database-name>;
+drop user <username>
+\du
+```
