@@ -11,3 +11,7 @@ echo | \
     openssl x509 -text
 ```
 
+## Chrome developer configurations
+```
+chrome://flags
+```
