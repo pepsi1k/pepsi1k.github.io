@@ -14,4 +14,5 @@ echo | \
 ## Chrome developer configurations
 ```
 chrome://flags
+chrome://inspect
 ```
