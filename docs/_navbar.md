@@ -25,6 +25,7 @@
   * [nginx](knowledge/devops/nginx.md)
   * [Vault](knowledge/devops/vault.md)
   * [ArgoCD](knowledge/devops/argocd.md)
+  * [Packer](knowledge/devops/packer.md)
 * **Security** 
   * [General](knowledge/security/general.md)
   * [SSH](knowledge/security/ssh.md)

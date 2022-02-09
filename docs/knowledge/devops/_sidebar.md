@@ -7,4 +7,5 @@
   * [nginx](knowledge/devops/nginx.md)
   * [Vault](knowledge/devops/vault.md)
   * [ArgoCD](knowledge/devops/argocd.md)
+  * [Packer](knowledge/devops/packer.md)
   
