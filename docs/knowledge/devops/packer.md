@@ -22,12 +22,20 @@
     qemu-img create -f qcow2 ubuntu-server.qcow2 6G
     ```
 
-    Test image
+    Install ubuntu on virtual image
     ```bash
     qemu-system-x86_64 \
       -enable-kvm \
+      -m 2048 \
       -cdrom ubuntu-20.04.3-live-server-amd64.iso \
       -boot order=d \
       -drive file=ubuntu-server.qcow2,media=disk
     ```
-
+    
+    Run virtual image without cdrom 
+    ```bash
+    qemu-system-x86_64 \
+      -enable-kvm \
+      -m 2048 \
+      -drive file=ubuntu-server.qcow2,media=disk
+    ```
