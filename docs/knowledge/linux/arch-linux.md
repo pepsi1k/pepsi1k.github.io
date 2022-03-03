@@ -176,6 +176,12 @@ grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
+If you long network interface name and with short, you must reconfigure grub.
+1. File `/etc/default/grub`, config `GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"`
+1. Reconfigure grub `grub-mkconfig -o /boot/grub/grub.cfg`
+1. Reboot device
+
+
 ## Настройка времени
 https://wiki.archlinux.org/index.php/Systemd-timesyncd
 
