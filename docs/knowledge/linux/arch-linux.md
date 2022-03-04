@@ -176,12 +176,6 @@ grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-If you long network interface name and with short, you must reconfigure grub.
-1. File `/etc/default/grub`, config `GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"`
-1. Reconfigure grub `grub-mkconfig -o /boot/grub/grub.cfg`
-1. Reboot device
-
-
 ## Настройка времени
 https://wiki.archlinux.org/index.php/Systemd-timesyncd
 
@@ -208,6 +202,18 @@ https://wiki.archlinux.org/index.php/User:Grufo/Color_System%27s_Bash_Prompt
 * для `ls` & `grep` можно создать `alias ls="ls --color="auto"` в `.bashrc`
 
 
+## Network
+If you see a long network interface name and wish short, for that you may reconfigure grub.
+1. File `/etc/default/grub`, config `GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"`
+1. Reconfigure grub `grub-mkconfig -o /boot/grub/grub.cfg`
+1. Reboot device
 
-
-
+The file `/etc/resolv.conf` reconfigure after reboot. Several options to fix that:
+1. Block dhcpcd rewrite resolve.conf, for that in file `/etc/dhcpcd.conf` add
+    ```
+    nohook resolv.conf
+    ```
+1. Second one, block write to file with linux attributes, for that 
+    ```bash
+    chattr +i /etc/resolv.conf
+    ```
