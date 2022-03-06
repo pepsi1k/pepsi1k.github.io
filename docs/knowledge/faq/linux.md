@@ -34,3 +34,17 @@ Open config file `/etc/pacman.conf` and add package name to this line:
 ```ini
 IgnorePkg = <package-name>
 ```
+
+## usermod add group
+
+```bash
+sudo usermod -a -G <groupname> <username>
+```
+
+## Capture packets from remote server
+```bash
+# create FIFO file
+mkfifo /tmp/remote
+wireshark -k -i /tmp/remote
+ssh user@host "tcpdump -s 0 -U -n -w - -i eth0 not port 22" > /tmp/remote
+```
