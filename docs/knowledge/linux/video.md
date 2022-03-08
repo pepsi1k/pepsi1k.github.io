@@ -51,6 +51,18 @@ alsamixer
 alsamixer -V capture # настройка микрофона
 ```
 
+Configure hot keys at `~/.xbindkeysrc`:
+```
+"amixer set 'Master' 10%+"
+   XF86AudioRaiseVolume
+"amixer set 'Master' 10%-"
+   XF86AudioLowerVolume
+"amixer set 'Master' toggle"
+   XF86AudioMute
+"amixer set Capture toggle"
+   XF86AudioMicMute
+```
+
 ![alsamixer](image/alsamixer.png)
 
 Проверка работы микрофона:

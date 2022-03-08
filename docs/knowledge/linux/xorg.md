@@ -174,3 +174,24 @@ xset -b
 ```
 You can add this command to a astartup file such as `/etc/xprofile` to make it permanent.
 
+
+## Hotkeys
+
+You can use `xbindkeys`, by default this util read config file from `~/.xbindkeysrc`
+
+```bash
+# ~/.xbindkeysrc
+
+"xbacklight -inc 10"
+   XF86MonBrightnessUp
+"xbacklight -dec 10"
+   XF86MonBrightnessDown
+   
+"dm-tool lock"
+   Control+Alt + l
+```
+
+To get a key code run:
+```bash
+xbindkeys -k
+```

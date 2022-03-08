@@ -21,3 +21,17 @@ sudo pacman -S maim
 maim -g $(xrectsel) | xclip -selection clipboard -t image/jpeg
 ```
 
+```bash
+# take screanshot from current active window
+"maim -s | xclip -selection clipboard -t image/jpeg"
+	Print
+# take screanshot from selected region
+"maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/jpeg"
+	Shift+Print
+# take screanshot from full display
+"maim | xclip -selection clipboard -t image/jpeg"
+	Control+Print
+```
+
+
+
