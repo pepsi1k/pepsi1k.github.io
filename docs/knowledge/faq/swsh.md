@@ -5,3 +5,5 @@ VPN wireguard:
 https://www.wireguard.com/
 
 Honepot
+
+Deep packet inspector
