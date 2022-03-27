@@ -15,6 +15,7 @@ du -sh */
 
 ## List available packages
 ```bash
+# ubuntu
 apt-cache madison gitlab-ce
 ```
 

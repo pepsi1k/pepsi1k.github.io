@@ -11,9 +11,9 @@ cd xrectsel
 makepkg -sri
 ```
 
-Скачаем `maim` - это приложение делает снимок:
+Скачаем `maim` это приложение делает снимок, также нужно установить compositor for X11, я выбрал `picom`
 ```console
-sudo pacman -S maim
+sudo pacman -S maim picom
 ```
 
 Теперь можем создать снимок. Он сохранится в **clipboard**
