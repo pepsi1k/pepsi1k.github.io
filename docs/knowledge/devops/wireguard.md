@@ -6,6 +6,7 @@ docs:
 pacman -S wireguard-tools
 
 wg genkey > /etc/wireguard/private.key
+wg pubkey < /etc/wireguard/private.key > public.key
 ```
 
 ```bash
