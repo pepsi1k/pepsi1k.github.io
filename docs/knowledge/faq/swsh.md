@@ -7,3 +7,5 @@ https://www.wireguard.com/
 Honepot
 
 Deep packet inspector
+
+![8bit-color-plate](./images/8bit-color-plate.jpg)
