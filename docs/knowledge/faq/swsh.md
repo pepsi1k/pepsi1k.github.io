@@ -4,6 +4,8 @@ https://github.com/thinkst/opencanary
 VPN wireguard: 
 https://www.wireguard.com/
 
+VPN L2TP
+
 Honepot
 
 Deep packet inspector
