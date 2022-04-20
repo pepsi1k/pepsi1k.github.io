@@ -49,3 +49,8 @@ mkfifo /tmp/remote
 wireshark -k -i /tmp/remote
 ssh user@host "tcpdump -s 0 -U -n -w - -i eth0 not port 22" > /tmp/remote
 ```
+
+## generate user:pass for basic auth
+```bash
+htpasswd -nbm <user> <password>
+```
