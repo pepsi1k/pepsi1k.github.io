@@ -41,6 +41,11 @@ for i in $(kubectl get pods -o json | jq -r '.items[].metadata.name'); do kubect
 kubectl get pod -A --field-selector spec.nodeName=$node
 ```
 
+## Manually run job from cronjobs
+```bash
+kubectl create job --from=cronjob/mysql-backups mysql-backup-manual-00
+```
+
 ## While true
 ```yaml
 # Pod
