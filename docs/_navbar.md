@@ -16,6 +16,9 @@
   * [trans](knowledge/linux/trans.md)
   * [ftp](knowledge/linux/ftp.md)
   * [Torrent](knowledge/linux/torrent.md)
+* **Database**
+  * [mysql](knowledge/db/mysql.md)
+  * [postgres](knowledge/db/postgres.md)
 * **DevOps**
   * [AWS](knowledge/devops/aws.md)
   * [Docker](knowledge/devops/docker.md)
