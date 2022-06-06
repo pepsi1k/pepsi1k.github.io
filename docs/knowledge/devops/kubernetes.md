@@ -46,6 +46,11 @@ kubectl get pod -A --field-selector spec.nodeName=$node
 kubectl create job --from=cronjob/mysql-backups mysql-backup-manual-00
 ```
 
+## Remove all evicted pods
+```bash
+kubectl get pods -A | grep Evicted | awk '{print $1,$2,$4}' | xargs kubectl delete pod $2 -n $1
+```
+
 ## While true
 ```yaml
 # Pod
