@@ -54,3 +54,9 @@ ssh user@host "tcpdump -s 0 -U -n -w - -i eth0 not port 22" > /tmp/remote
 ```bash
 htpasswd -nbm <user> <password>
 ```
+
+## p2p git
+```bash
+git daemon --verbose --export-all --reuseaddr --base-path=.git --strict-paths .git/
+git clone git://<server-ip>/ <repo>
+```
