@@ -56,7 +56,29 @@ htpasswd -nbm <user> <password>
 ```
 
 ## p2p git
+
 ```bash
 git daemon --verbose --export-all --reuseaddr --base-path=.git --strict-paths .git/
 git clone git://<server-ip>/ <repo>
+```
+
+## p2p vpn ssh
+
+original link: https://admins247.com/vpn-over-ssh/
+
+modify file `/etc/ssh/sshd_config`:
+```conf
+PermitRootLogin yes
+PermitTunnel yes
+```
+
+configure **server**:
+```bash
+ssh -w5:5 root@hserver
+ifconfig tun5 10.0.0.1 netmask 255.255.255.252
+```
+
+configure **client**:
+```bash
+ifconfig tun5 10.0.0.2 netmask 255.255.255.252
 ```
