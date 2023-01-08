@@ -83,8 +83,7 @@ configure **client**:
 ifconfig tun5 10.0.0.2 netmask 255.255.255.252
 ```
 
-## nginx 
-generate basic pass
+## nginx basic auth
 ```bash
-htpasswd -nbm node <password>
+htpasswd -nbm <user> <password>
 ```
