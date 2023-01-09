@@ -87,3 +87,13 @@ ifconfig tun5 10.0.0.2 netmask 255.255.255.252
 ```bash
 htpasswd -nbm <user> <password>
 ```
+
+
+## configure fstab
+
+```
+LABEL=cloudimg-rootfs	                  /	        ext4 defaults,discard	0 1
+UUID=121321313-5fa7-4c10-be24-asdlfkj1    /mnt/data ext4 defaults           0 2
+```
+
+using `blkid` you are allowed to find the UUID
