@@ -51,7 +51,7 @@ scp -r user@server:/path/to/folder /home/user # Копирование дире�
 ssh-keygen -t rsa -b 4096 -C "bohdan@home"
 ssh-keygen -t ecdsa -b 384 -C "bohdan@home" -f bohdan
 # better algorithm
-ssh-keygen -t ed25519 -b 384 -C "bohdan@home" -f bohdan 
+ssh-keygen -t ed25519 -C "bohdan@home" -f bohdan 
 ```
 
 RSA: Equal or greater-than to 1024 bit.
