@@ -43,6 +43,8 @@ dconf load /org/gnome/terminal/legacy/profiles:/:$PROFILE_ID/ < "$inputFile"
 
 `Ctr+Shift+P` -> "Developer: Inspect Editor Tokens and Scopes" -> click on specific token in your code
 
+![Developer: Inspect tokens](./images/vscode-inspect-tokens.jpg)
+
 ```json
 // settings.json
 "editor.tokenColorCustomizations": {
@@ -50,7 +52,7 @@ dconf load /org/gnome/terminal/legacy/profiles:/:$PROFILE_ID/ < "$inputFile"
     "textMateRules": [
       {
         "scope": [
-          "<token>",
+          "keyword.cmake",
         ],
         "settings": {
           "foreground": "#75a67e"
