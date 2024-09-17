@@ -19,3 +19,12 @@ GRANT CREATE ON SCHEMA public TO polpick;
 GRANT ALL PRIVILEGES ON DATABASE polpick TO polpick;
 
 ```
+
+#### note
+```
+\list or \l     : list all databases
+\c <db>         : connect to a certain database
+\c <db> <user>  : connect to a certain database as a user 
+\dt             : list all tables in the current database using your search_path
+\dt *.          : list all tables in the current database regardless your search_path
+```
