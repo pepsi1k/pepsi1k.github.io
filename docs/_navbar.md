@@ -19,6 +19,7 @@
 * **Database**
   * [mysql](knowledge/db/mysql.md)
   * [postgres](knowledge/db/postgresql.md)
+  - [mongodb](knowledge/db/mongodb.md)
 * **DevOps**
   * [AWS](knowledge/devops/aws.md)
   * [Docker](knowledge/devops/docker.md)
@@ -36,8 +37,6 @@
   * [K8S-sec checklist](knowledge/security/kubernetes-sec-checklist.md)
 * **Languages**
   * [bash](knowledge/languages/bash.md)
-* **University**
-  * [mongodb](knowledge/university/mongodb.md)
 * **FAQ**
   * [Linux](knowledge/faq/linux.md)
   * [React Native](knowledge/faq/react-native.md)
