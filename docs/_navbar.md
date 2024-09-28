@@ -19,7 +19,7 @@
 * **Database**
   * [mysql](knowledge/db/mysql.md)
   * [postgres](knowledge/db/postgresql.md)
-  - [mongodb](knowledge/db/mongodb.md)
+  * [mongodb](knowledge/db/mongodb.md)
 * **DevOps**
   * [AWS](knowledge/devops/aws.md)
   * [Docker](knowledge/devops/docker.md)
@@ -43,3 +43,5 @@
   * [Databases](knowledge/faq/databases.md)
   * [swsh](knowledge/faq/swsh.md)
   * [color-plates](knowledge/faq/color-plates.md)
+* **Notifications**
+  * [open-ssh-connection-telegram](knowledge/notiifcations/open-ssh-connection-telegram.md)
