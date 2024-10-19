@@ -1,7 +1,7 @@
 * **DevOps**
   * [AWS](knowledge/devops/aws.md)
   * [Docker](knowledge/devops/docker.md)
-  * [Kubernetes](knowledge/devops/kubernetes.md)
+  * [k8s-faq](knowledge/devops/k8s-faq.md)
   * [Helm](knowledge/devops/helm.md)
   * [ETH prune](knowledge/devops/eth-prune.md)
   * [nginx](knowledge/devops/nginx.md)
