@@ -43,5 +43,7 @@
   * [Databases](knowledge/faq/databases.md)
   * [swsh](knowledge/faq/swsh.md)
   * [color-plates](knowledge/faq/color-plates.md)
+  * [restore-file](knowledge/faq/restore-file.md)
+  
 * **Notifications**
   * [open-ssh-connection-telegram](knowledge/notiifcations/open-ssh-connection-telegram.md)
